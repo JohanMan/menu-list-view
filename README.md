@@ -1,6 +1,8 @@
 # menu-list-view
 类似于侧滑ListView，但是不是滑动打开菜单，是点击打开菜单
 
+![效果图](https://github.com/JohanMan/menu-list-view/raw/master/src/main/res/drawable/Screenshot.png)
+
 ## 使用方法
 （1）在xml生命MenuListView
 ```
