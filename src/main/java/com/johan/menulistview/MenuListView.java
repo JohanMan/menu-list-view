@@ -84,12 +84,16 @@ public class MenuListView extends ListView implements AdapterView.OnItemClickLis
         if (view instanceof MenuListViewItemLayout) {
             MenuListViewItemLayout layout = (MenuListViewItemLayout) view;
             boolean slideState = slide(layout, false);
-            if (!slideState) return;
-            if (lastSlideLayout != null && lastSlideLayout != layout) {
-                slide(lastSlideLayout, false);
+            if (slideState) {
+                if (lastSlideLayout != null && lastSlideLayout != layout) {
+                    slide(lastSlideLayout, false);
+                }
+                lastSlideLayout = layout;
+                lastSlidePosition = position;
+            } else {
+                lastSlideLayout = null;
+                lastSlidePosition = 0;
             }
-            lastSlideLayout = layout;
-            lastSlidePosition = position;
         }
     }
 
