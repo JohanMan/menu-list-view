@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">SlideListView</string>
+
+    <item type="id" name="tag_slide"></item>
+
+</resources>
