@@ -49,14 +49,14 @@ private ItemMenu createDeleteMenu() {
 ...
 listView.addItemMenu(createEditMenu());
 listView.addItemMenu(createDeleteMenu());
-listView.setOnSlideMenuClickListener(new MenuListView.OnSlideMenuClickListener() {
+listView.setOnItemMenuClickListener(new MenuListView.OnItemMenuClickListener() {
     @Override
-    public void onSlideMenuClick(int id, int position) {
+    public void onItemMenuClick(int id, int position) {
         switch (id) {
             case MENU_ID_EDIT :
-               break;
+                break;
             case MENU_ID_DELETE :
-               break;
+                break;
         }
     }
 });
