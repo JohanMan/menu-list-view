@@ -26,7 +26,7 @@ public class MenuListView extends ListView implements AdapterView.OnItemClickLis
     private int lastFirst;
     private View firstVisibleView, lastVisibleView;
     private int menuViewsWidth;
-    private OnSlideMenuClickListener onSlideMenuClickListener;
+    private OnItemMenuClickListener onItemMenuClickListener;
     private List<ItemMenu> itemMenuList = new ArrayList<>();
 
     public MenuListView(Context context, AttributeSet attrs) {
@@ -152,17 +152,17 @@ public class MenuListView extends ListView implements AdapterView.OnItemClickLis
         int id = (int) view.getTag();
         MenuListViewItemLayout layout = (MenuListViewItemLayout) getChildAt(lastSlidePosition - lastFirst);
         slide(layout, false);
-        if (onSlideMenuClickListener != null) {
-            onSlideMenuClickListener.onSlideMenuClick(id, lastSlidePosition);
+        if (onItemMenuClickListener != null) {
+            onItemMenuClickListener.onItemMenuClick(id, lastSlidePosition);
         }
     }
 
-    public void setOnSlideMenuClickListener(OnSlideMenuClickListener onSlideMenuClickListener) {
-        this.onSlideMenuClickListener = onSlideMenuClickListener;
+    public void setOnItemMenuClickListener(OnItemMenuClickListener onItemMenuClickListener) {
+        this.onItemMenuClickListener = onItemMenuClickListener;
     }
 
-    public interface OnSlideMenuClickListener {
-        void onSlideMenuClick(int id, int position);
+    public interface OnItemMenuClickListener {
+        void onItemMenuClick(int id, int position);
     }
 
 }
